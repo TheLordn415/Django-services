@@ -1,0 +1,53 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+Download Instagram media
+{% endblock %}
+
+{% block cssfile %}
+{% static 'main/css/downloadmediainstagram.css' %}
+{% endblock %}
+
+{% block myblock1 %}
+<script scr="js/downloadmediainstagram.js"></script>
+<div class="div-downloadinstagrammedia">
+    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="">
+    <a class="text-download">Download media from Instagram</a>
+    <form action="#" method="post">
+        {% csrf_token %}
+        <label for="media_url">Insert media link here: </label>
+        <input id="media_url" type="text" name="media_url" value="{{ name }}">
+        <button type="submit" class="btn btn-warning">Start</button>
+    </form>
+    <div class="div-response">
+        <div class="div-instagrampost">
+            <div class="div-instagram-header">
+                <img src="" alt="Avatar picture" class="postauthorimg">
+                <p class="postauthorname">Post author name</p>
+                <i class="fa-solid fa-ellipsis-vertical fa-2xl" id="postmenu"></i>
+            </div>
+            <div class="div-instagrammedia">
+                <img src="" alt="Post media" class="postmedia">
+            </div>
+            <div class="div-instagram-footer">
+                <div class="postbuttons">
+                    <div class="buttonlike">
+                        <i class="fa-solid fa-heart fa-2xl" id=""></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% if output_path_file %}
+    <br>
+    <div class="div-response">
+        <img src="{{ video_image_url }}" alt="" class="">
+        <a href="../static/users_files/{{ output_path_file }}" class="btn btn-success" download="video.mp4">Download</a>
+
+    </div>
+
+    {% endif %}
+</div>
+{% endblock %}

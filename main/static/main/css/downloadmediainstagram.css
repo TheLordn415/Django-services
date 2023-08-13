@@ -1,0 +1,73 @@
+.div-downloadinstagrammedia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 5px;
+}
+
+.div-downloadinstagrammedia .text-download{
+    text-decoration: none;
+    font-size: 36px;
+    font-weight: bold;
+    background: linear-gradient(to right, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #FFC500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.div-downloadinstagrammedia label{
+    color: rgb(0, 155, 155);
+}
+
+.div-downloadinstagrammedia .logo {
+    width: 150px;
+}
+
+.div-response{
+    margin: 10px;
+    border: 1px solid rgb(0, 175, 0);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-instagrampost{
+    background-color: rgb(255,255,255);
+    padding: 5px;
+}
+
+.div-instagram-header{
+    border: 1px solid rgb(175, 175, 0);
+    width: 600px;
+    display: inline-block;
+}
+
+.div-instagram-header *{
+    display: block;
+    float: left;
+}
+
+#postmenu{
+    float: right;
+    margin-top: 15px;
+    margin-right: 5px;
+}
+
+.postbuttons {
+    float: left;
+}
+
+.buttonlike {
+    width: 50px;
+    height: 50px;
+    padding-top: 12px;
+    padding-left: 9px;
+    border-radius: 50px;
+
+    background-color: rgb(0,0,0);
+    color: rgb(255,0,0);
+
+}

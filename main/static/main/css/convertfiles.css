@@ -1,0 +1,18 @@
+.div-convertfiles{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 5px;
+}
+
+.text-convertfiles{
+    text-decoration: none;
+    font-family: 'Audiowide';
+    font-size: 36px;
+    font-weight: bold;
+    background: linear-gradient(to right, #FFFFFF, rgb(255,0,0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,67 @@
+.div-downloadyoutubevideo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 5px;
+}
+
+.error-text{
+    text-decoration: none;
+    font-family: 'Audiowide';
+    font-size: 36px;
+    font-weight: bold;
+    color: rgb(255,0,0);
+}
+
+.div-downloadyoutubevideo .text-download{
+    text-decoration: none;
+    font-family: 'Audiowide';
+    font-size: 36px;
+    font-weight: bold;
+    background: linear-gradient(to right, #FFFFFF, rgb(255,0,0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.div-downloadyoutubevideo .logo {
+    width: 200px;
+    background: rgb(255,255,255);
+    padding: 5px;
+    border-radius: 17px;
+}
+
+.div-downloadyoutubevideo label{
+    color: rgb(0, 155, 155);
+    font-family: 'Unispace';
+    font-size: 27px;
+}
+
+.div-downloadyoutubevideo button{
+    font-family: 'Unispace';
+    font-size: 18px;
+}
+
+.div-downloadyoutubevideo input{
+    width: 370px;
+    height: 50px;
+    font-style: italic;
+}
+
+.div-response{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-response *{
+    margin-top: 15px;
+}
+
+.div-response a{
+    font-family: 'Unispace';
+    font-size: 22px;
+    color: rgb(0,0,0);
+}

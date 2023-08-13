@@ -1,0 +1,28 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+File convertor
+{% endblock %}
+
+{% block cssfile %}
+{% static 'main/css/convertfiles.css' %}
+{% endblock %}
+
+{% block links %}
+<link href="https://fonts.googleapis.com/css2?family=Audiowide" rel="stylesheet">
+{% endblock %}
+
+{% block myblock1 %}
+<script src="{% static 'main/js/convertfiles.js' %}"></script>
+<div class="div-convertfiles">
+    <form action="#" method="post">
+        {% csrf_token %}
+        <p class="text-convertfiles">File convertor</p>
+        <input type="file" id="fileInput">
+        <p type="button" class="btn btn-danger" onclick="uploadFile()">Завантажити файл</p>
+        <p id="extensionText"></p>
+        <button type="submit">SUBMIT.gi</button>
+    </form>
+</div>
+{% endblock %}

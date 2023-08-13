@@ -1,0 +1,48 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+Download Youtube Video
+{% endblock %}
+
+{% block cssfile %}
+{% static 'main/css/downloadyoutubevideo.css' %}
+{% endblock %}
+
+{% block links %}
+<link href="https://fonts.googleapis.com/css2?family=Audiowide" rel="stylesheet">
+{% endblock %}
+
+{% block myblock1 %}
+
+<div class="div-downloadyoutubevideo">
+    <img class="logo" src="{% static 'main/img/logo_youtube.png' %}" alt="">
+    <a class="text-download">Download a video from ►Youtube</a>
+    <form action="#" method="post">
+        {% csrf_token %}
+        <label for="video_url">Insert video link here: </label>
+        <input id="video_url" type="text" name="video_url" value="{{ name }}" placeholder="https://www.youtube.com/watch?v=...">
+        <button type="submit" class="btn btn-warning">Start</button>
+        <br>
+        <label for="resolution">Choose the resolution:</label>
+        <select name="resolution" id="resolution">
+            <option value="1080p">1080p</option>
+            <option value="mp3">MP3 Format</option>
+            <option value="720p">720p</option>
+            <option value="480p">480p</option>
+            <option value="360p">360p</option>
+            <option value="240p">240p</option>
+        </select>
+    </form>
+    {% if error %}
+    <p class="error-text">{{ error }}</p>
+    {% elif output_path_file %}
+    <br>
+    <div class="div-response">
+        <img src="{{ video_image_url }}" alt="" class="">
+        <a href="../static/users_files/{{ output_path_file }}" class="btn btn-success" download="{{ file_format }}">Download</a>
+    </div>
+
+    {% endif %}
+</div>
+{% endblock %}

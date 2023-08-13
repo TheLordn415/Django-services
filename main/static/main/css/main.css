@@ -1,0 +1,131 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column
+}
+footer{
+    height: auto;
+    background: #181818;
+    color: rgb(0,125,125);
+    border-top: 5px solid rgb(220,175,0);
+    text-align: center;
+    flex-shrink: 0;
+}
+
+footer p {
+    color: rgb(0,175,175);
+}
+
+header {
+    display: flex;
+    background: #181818;
+    padding: 10px 0px 10px 10px;
+    color: rgb(0,125,125);
+    border-bottom: 5px solid rgb(220,175,0);
+    max-height: 115px;
+    font-family: 'Unispace';
+}
+
+.logonname{
+    min-width: 280px;
+    max-height: 92px;
+}
+
+header img {
+  width: 50px;
+  height: auto;
+  float: left;
+  margin-top: 17px;
+}
+
+header .logo a{
+    font-size: 40px;
+    margin-left: 10px;
+    top: 15px;
+    font-weight: bold;
+    position: relative;
+    text-decoration: none;
+    color: rgb(0,125,125);
+}
+
+header .div-navigation {
+    flex-grow: 1;
+    padding-top: 17px;
+}
+
+header ul{
+    list-style: none;
+    font-size: 24px;
+    float: right;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: rgb(0,155,155);
+}
+
+header ul li {
+    color: rgb(0,155,155);
+    display: inline-block;
+    transition: all .3s ease;
+    margin-top: 10px;
+    margin-right: 40px;
+}
+
+header ul li ul li:hover{
+    border: 1px solid rgb(222,222,0);
+}
+
+header ul li:hover, header ul a:hover {
+    color: rgb(222,222,0);
+    transform: scale(1.1);
+}
+
+.div-navigation ul li ul li{
+    float: left;
+    background-color: #181818;
+    border: 1px solid rgb(0,155,155);
+    font-size: 16px;
+    margin: 0px;
+    padding: 0px;
+    width: 175px;
+    height: 50px;
+    text-align: center;
+}
+
+.div-navigation ul li ul{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    padding-left: 0px;
+    margin: 0;
+}
+
+.div-navigation ul li:hover ul{
+    display: flex;
+}
+
+main{
+    flex: 1
+}
+
+.features{
+    float: left;
+    color: rgb(255,255,255);
+    margin-top: 20px;
+    text-align: center;
+}
+
+.features h1 {
+    font-size: 50px;
+}
+
+.features p {
+    max-width: 55%;
+    margin: 20px auto;
+}
