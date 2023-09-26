@@ -11,7 +11,8 @@ def download_video(url, csrf_token, resolution):
         yt = YouTube(url)
         video = yt.streams.filter(res=resolution).first().download(path)
         os.rename(video, path + "/" + "video.mp4")
-        return 1, f"Відео {video.split('/')[-1]} завантажено успішно!", 0
+        name = video.split("/")[-1].split("\\")[-1]
+        return 1, f"Відео {name} завантажено успішно!", 0
     except Exception as e:
         return 0, "Сталася помилка при завантаженні відео:", str(e)
 
@@ -21,7 +22,7 @@ def download_video_and_convert_to_mp3(url, csrf_token):
         if not os.path.exists(path):
             os.makedirs(path)
         else:
-            print("А ви хто такі?")
+            print("Ви хто такі, я вас не кликав?")
         yt = YouTube(url)
         audio = yt.streams.filter(only_audio=True).first().download(path)
         os.rename(audio, path + "/" + "audio.mp3")

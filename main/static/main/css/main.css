@@ -125,7 +125,38 @@ main{
     font-size: 50px;
 }
 
-.features p {
-    max-width: 55%;
-    margin: 20px auto;
+.div-youtube-tutorial{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-youtube-tutorial p{
+    max-width: 60%;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.div-youtube-tutorial img{
+    width:30%;
+    border: 2px solid #dcaf00;
+}
+
+.div-convert-tutorial{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-convert-tutorial p{
+    max-width: 60%;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.div-convert-tutorial img{
+    width:30%;
+    border: 2px solid #dcaf00;
 }

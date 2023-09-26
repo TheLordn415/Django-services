@@ -16,13 +16,40 @@ File convertor
 {% block myblock1 %}
 <script src="{% static 'main/js/convertfiles.js' %}"></script>
 <div class="div-convertfiles">
-    <form action="#" method="post">
+    <form action="#" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <p class="text-convertfiles">File convertor</p>
-        <input type="file" id="fileInput">
-        <p type="button" class="btn btn-danger" onclick="uploadFile()">Завантажити файл</p>
-        <p id="extensionText"></p>
-        <button type="submit">SUBMIT.gi</button>
+        <div class="div-fileInput">
+            <p>Input file: </p>
+            <input type="file" id="fileInput" name="fileInput">
+        </div>
+        <div class="div-choose" id="div-choose" hidden>
+            <p class="extensionText" id="extensionText"></p>
+            <div class="div-radio-buttons">
+                <input type="radio" id="Choice1" name="extenstionOutput" value="docx" disabled/>
+                <label for="Choice1">DOCX</label>
+                <input type="radio" id="Choice2" name="extenstionOutput" value="pdf" disabled/>
+                <label for="Choice2">PDF</label>
+                <input type="radio" id="Choice3" name="extenstionOutput" value="jpg" disabled/>
+                <label for="Choice3">JPG</label>
+                <input type="radio" id="Choice4" name="extenstionOutput" value="png" disabled/>
+                <label for="Choice4">PNG</label>
+                <input type="radio" id="Choice5" name="extenstionOutput" value="webp" disabled/>
+                <label for="Choice5">WEBP</label>
+                <input type="radio" id="Choice6" name="extenstionOutput" value="mp3" disabled/>
+                <label for="Choice6">MP3</label>
+            </div>
+            <button class="button-submit" type="submit">SUBMIT</button>
+        </div>
+
     </form>
+    {% if error %}
+    <p class="error-text">{{ error }}</p>
+    {% elif output_path_file %}
+    <br>
+    <div class="div-response">
+        <a href="{{ output_path_file }}" class="btn btn-success" download="{{ file_format }}">Download</a>
+    </div>
+    {% endif %}
 </div>
 {% endblock %}

@@ -8,5 +8,5 @@ urlpatterns = [
     #path('contacts', views.contacts, name='contacts'),
     path('downloadyoutubevideo', views.DownloadYoutubeVideo, name='downloadyoutubevideo'),
     path('downloadinstagrammedia', views.downloadmediainstagram, name='downloadinstagrammedia'),
-    path('convertfiles', views.convertfiles, name='convertfiles')
-]
+    path('convertfiles', views.ConvertFiles, name='convertfiles')
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

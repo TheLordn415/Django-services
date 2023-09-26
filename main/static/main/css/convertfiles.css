@@ -16,3 +16,34 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.div-fileInput *{
+    color: #009b9b;
+    display: inline-block;
+}
+
+.div-fileInput p, .extensionText{
+    color: rgb(0, 155, 155);
+    font-family: 'Unispace';
+    font-size: 27px;
+}
+
+.div-radio-buttons *{
+    color: #009b9b;
+    font-family: 'Unispace';
+    font-size: 17px;
+}
+
+.error-text{
+    text-decoration: none;
+    font-family: 'Audiowide';
+    font-size: 36px;
+    font-weight: bold;
+    color: rgb(255,0,0);
+}
+
+.div-response a{
+    font-family: 'Unispace';
+    font-size: 22px;
+    color: rgb(0,0,0);
+}
