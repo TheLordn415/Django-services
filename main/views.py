@@ -90,7 +90,7 @@ def ConvertFiles(request):
             convert_files_scripts.convert_<>_to_<>(path_file_input, path_file_output)
             return render(request, 'main/convertfiles.html', data)
         '''
-        if file_input_extension == 'pdf' and file_extenstion_output == 'docx':
+        if file_input_extension.lower() == 'pdf' and file_extenstion_output.lower() == 'docx':
             data = {
                 'output_path_file': f'main/static/users_files/{csrf_token}/output.{file_extenstion_output}',
                 'file_format': f'output.{file_extenstion_output}'
@@ -99,7 +99,7 @@ def ConvertFiles(request):
             path_file_output = f'main/static/users_files/{csrf_token}/output.{file_extenstion_output}'
             convert_files_scripts.convert_pdf_to_docx(path_file_input, path_file_output)
             return render(request, 'main/convertfiles.html', data)
-        elif file_input_extension == 'docx' and file_extenstion_output == 'pdf':
+        elif file_input_extension.lower() == 'docx' and file_extenstion_output.lower() == 'pdf':
             data = {
                 'output_path_file': f'main/static/users_files/{csrf_token}/output.{file_extenstion_output}',
                 'file_format': f'output.{file_extenstion_output}'
@@ -108,7 +108,7 @@ def ConvertFiles(request):
             path_file_output = f'main/static/users_files/{csrf_token}/output.{file_extenstion_output}'
             convert_files_scripts.convert_docx_to_pdf(path_file_input, path_file_output)
             return render(request, 'main/convertfiles.html', data)
-        elif file_input_extension == 'jpg' and file_extenstion_output == 'png':
+        elif file_input_extension.lower() == 'jpg' and file_extenstion_output.lower() == 'png':
             data = {
                 'output_path_file': f'main/static/users_files/{csrf_token}/output.{file_extenstion_output}',
                 'file_format': f'output.{file_extenstion_output}'
@@ -117,7 +117,7 @@ def ConvertFiles(request):
             path_file_output = f'main/static/users_files/{csrf_token}/output.{file_extenstion_output}'
             convert_files_scripts.convert_jpg_to_png(path_file_input, path_file_output)
             return render(request, 'main/convertfiles.html', data)
-        elif file_input_extension == 'jpg' and file_extenstion_output == 'webp':
+        elif file_input_extension.lower() == 'jpg' and file_extenstion_output.lower() == 'webp':
             data = {
                 'output_path_file': f'main/static/users_files/{csrf_token}/output.{file_extenstion_output}',
                 'file_format': f'output.{file_extenstion_output}'
@@ -126,7 +126,7 @@ def ConvertFiles(request):
             path_file_output = f'main/static/users_files/{csrf_token}/output.{file_extenstion_output}'
             convert_files_scripts.convert_jpg_to_webp(path_file_input, path_file_output)
             return render(request, 'main/convertfiles.html', data)
-        elif file_input_extension == 'png' and file_extenstion_output == 'jpg':
+        elif file_input_extension.lower() == 'png' and file_extenstion_output.lower() == 'jpg':
             data = {
                 'output_path_file': f'main/static/users_files/{csrf_token}/output.{file_extenstion_output}',
                 'file_format': f'output.{file_extenstion_output}'
@@ -135,7 +135,7 @@ def ConvertFiles(request):
             path_file_output = f'main/static/users_files/{csrf_token}/output.{file_extenstion_output}'
             convert_files_scripts.convert_png_to_jpg(path_file_input, path_file_output)
             return render(request, 'main/convertfiles.html', data)
-        elif file_input_extension == 'png' and file_extenstion_output == 'webp':
+        elif file_input_extension.lower() == 'png' and file_extenstion_output.lower() == 'webp':
             data = {
                 'output_path_file': f'main/static/users_files/{csrf_token}/output.{file_extenstion_output}',
                 'file_format': f'output.{file_extenstion_output}'
@@ -144,7 +144,7 @@ def ConvertFiles(request):
             path_file_output = f'main/static/users_files/{csrf_token}/output.{file_extenstion_output}'
             convert_files_scripts.convert_png_to_webp(path_file_input, path_file_output)
             return render(request, 'main/convertfiles.html', data)
-        elif file_input_extension == 'webp' and file_extenstion_output == 'png':
+        elif file_input_extension.lower() == 'webp' and file_extenstion_output.lower() == 'png':
             data = {
                 'output_path_file': f'main/static/users_files/{csrf_token}/output.{file_extenstion_output}',
                 'file_format': f'output.{file_extenstion_output}'
@@ -153,7 +153,7 @@ def ConvertFiles(request):
             path_file_output = f'main/static/users_files/{csrf_token}/output.{file_extenstion_output}'
             convert_files_scripts.convert_webp_to_png(path_file_input, path_file_output)
             return render(request, 'main/convertfiles.html', data)
-        elif file_input_extension == 'webp' and file_extenstion_output == 'jpg':
+        elif file_input_extension.lower() == 'webp' and file_extenstion_output.lower() == 'jpg':
             data = {
                 'output_path_file': f'main/static/users_files/{csrf_token}/output.{file_extenstion_output}',
                 'file_format': f'output.{file_extenstion_output}'
@@ -162,7 +162,7 @@ def ConvertFiles(request):
             path_file_output = f'main/static/users_files/{csrf_token}/output.{file_extenstion_output}'
             convert_files_scripts.convert_webp_to_jpg(path_file_input, path_file_output)
             return render(request, 'main/convertfiles.html', data)
-        elif file_input_extension == 'mp4' and file_extenstion_output == 'mp3':
+        elif file_input_extension.lower() == 'mp4' and file_extenstion_output.lower() == 'mp3':
             data = {
                 'output_path_file': f'main/static/users_files/{csrf_token}/audio.{file_extenstion_output}',
                 'file_format': f'audio.{file_extenstion_output}'

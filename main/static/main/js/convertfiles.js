@@ -6,7 +6,7 @@ function uploadFile() {
     if (fileInput.files.length > 0) {
         const file = fileInput.files[0];
         const fileName = file.name;
-        const fileExtension = fileName.split('.').pop(); // get file extension
+        const fileExtension = fileName.split('.').pop().toLowerCase(); // get file extension
         extensionText.textContent = `File extension: ${fileExtension}`;
         toggleDisabledByExtension(fileExtension);
         div_choose.removeAttribute("hidden");     // Show
