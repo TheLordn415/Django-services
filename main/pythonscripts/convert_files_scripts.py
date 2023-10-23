@@ -12,7 +12,7 @@ def convert_pdf_to_docx(pdf_path, docx_path):
 def convert_docx_to_pdf(docx_path, pdf_path):
     docx2pdf.convert(docx_path, pdf_path)
 
-    print(f"Файл {docx_path.split('/')[-1]} успішно конвертовано у {pdf_path.split('/')[-1]}")
+    print(f"Файл {docx_path.split('/')[-1]} успішно конвертовано у {pdf_path.split('/')[-1]}.")
 
 def convert_jpg_to_png(jpg_path, png_path):
     image = ConvertImage.open(jpg_path)
