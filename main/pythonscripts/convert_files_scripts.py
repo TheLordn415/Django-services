@@ -7,7 +7,7 @@ def convert_pdf_to_docx(pdf_path, docx_path):
     docx_converter.convert(docx_path, start=0, end=len(pdf_reader.pages))
     docx_converter.close()
 
-    print(f'Конвертація завершена. Результат збережено у файлі: {docx_path}')
+    print(f'Конвертація завершена. Результат збережено у файлі: {docx_path}.')
 
 def convert_docx_to_pdf(docx_path, pdf_path):
     docx2pdf.convert(docx_path, pdf_path)
